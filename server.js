@@ -1,10 +1,11 @@
 const express = require('express');
 const mongoose = require('mongoose')
-
+const cors = require('cors')
 const app = express();
 const port = 3000;
 require('dotenv').config();
 app.use(express.json());
+app.use(cors());
 
 // สร้าง Schema สำหรับ User
 const userSchema = new mongoose.Schema({
